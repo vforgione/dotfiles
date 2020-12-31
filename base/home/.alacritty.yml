@@ -8,6 +8,9 @@ shell:
   args:
     - '--login'
 
+selection:
+  save_to_clipboard: true
+
 window:
   dimensions:
     columns: 120
