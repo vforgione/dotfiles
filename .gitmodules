@@ -1,0 +1,18 @@
+[submodule "base/home/.local/share/nvim/site/pack/x/start/coc.nvim"]
+	path = base/home/.local/share/nvim/site/pack/x/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+[submodule "base/home/.local/share/nvim/site/pack/x/start/editorconfig-vim"]
+	path = base/home/.local/share/nvim/site/pack/x/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "base/home/.local/share/nvim/site/pack/x/start/nerdtree"]
+	path = base/home/.local/share/nvim/site/pack/x/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "base/home/.local/share/nvim/site/pack/x/start/nerdtree-git-plugin"]
+	path = base/home/.local/share/nvim/site/pack/x/start/nerdtree-git-plugin
+	url = https://github.com/xuyuanp/nerdtree-git-plugin.git
+[submodule "base/home/.local/share/nvim/site/pack/x/start/vim-airline"]
+	path = base/home/.local/share/nvim/site/pack/x/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "base/home/.local/share/nvim/site/pack/x/start/vim-devicons"]
+	path = base/home/.local/share/nvim/site/pack/x/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git

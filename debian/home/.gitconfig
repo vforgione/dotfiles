@@ -1,0 +1,32 @@
+[user]
+	name = Vince Forgione
+	email = vince.4gione@icloud.com
+	identitfyfile = ~/.ssh/id_rsa
+	signingkey = 77E43D0CCCBEDB5AFF04BF77921324C9B78C9516
+
+[init]
+  defaultBranch = main
+
+[color]
+	ui = true
+	diff = true
+
+[alias]
+	prune = fetch --prune
+	undo = reset --soft ^HEAD
+	stash-all = stash save --include-untracked
+
+[status]
+	showUntrackedFiles = all
+
+[commit]
+	gpgsign = true
+
+[pull]
+  rebase = false
+
+[core]
+	editor = vim
+
+[gpg]
+	program = /usr/bin/gpg
