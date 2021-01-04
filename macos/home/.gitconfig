@@ -1,7 +1,7 @@
 [user]
 	name = Vince Forgione
 	email = vince.4gione@icloud.com
-	identitfyfile = ~/.ssh/id_rsa
+	identitfyfile = ~/.ssh/id_ed25519
 	signingkey = B123139FFDB7FBA0
 
 [init]
