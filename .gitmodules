@@ -16,3 +16,6 @@
 [submodule "base/home/.local/share/nvim/site/pack/x/start/vim-devicons"]
 	path = base/home/.local/share/nvim/site/pack/x/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "base/home/.local/share/nvim/site/pack/x/start/vim-floaterm"]
+	path = base/home/.local/share/nvim/site/pack/x/start/vim-floaterm
+	url = git@github.com:voldikss/vim-floaterm.git

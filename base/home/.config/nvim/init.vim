@@ -128,3 +128,13 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" ---------------------------
+"   FLOATERM CONFIGURATIONS
+" ---------------------------
+
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_kill   = '<F11>'
+let g:floaterm_keymap_toggle = '<F12>'
