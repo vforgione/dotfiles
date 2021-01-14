@@ -1928,7 +1928,7 @@
 				<real>0.3803921639919281</real>
 			</dict>
 			<key>Mouse Reporting</key>
-			<false/>
+			<true/>
 			<key>Name</key>
 			<string>One Dark Readable</string>
 			<key>Non Ascii Font</key>
