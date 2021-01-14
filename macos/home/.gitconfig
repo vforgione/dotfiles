@@ -26,7 +26,7 @@
   rebase = false
 
 [core]
-	editor = vim
+	editor = nvim
 
 [gpg]
 	program = /usr/local/bin/gpg
