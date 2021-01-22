@@ -71,6 +71,10 @@ export SDKMAN_DIR=$HOME/.sdkman
 [[ -x $(command -v sdk) ]] \
   && source $SDKMAN_DIR/bin/sdkman-init.sh
 
+# setup xdg vars
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 ##                 ##
 #  SETUP PROMPT(S)  #
