@@ -13,26 +13,9 @@ if ! command -v brew &>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-echo "brew tapping casks..."
-brew tap homebrew/cask
-brew tap homebrew/cask-fonts
-
 echo "brew installing formulae..."
-brew install \
-  bash \
-  bat \
-  git \
-  jq \
-  lsd \
-  neovim \
-  node \
-  pinentry-mac \
-  "python@3.9" \
-  tag \
-  tmux \
-  tree \
-  zsh
+brew bundle install
 
-brew install --cask font-hack-nerd-font
-brew install --cask gpg-suite
-brew install --cask rectangle
+echo "installing asdf..."
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+

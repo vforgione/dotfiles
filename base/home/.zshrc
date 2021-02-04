@@ -13,11 +13,12 @@ setopt NO_CASE_GLOB
 #  TAB COMPLETION  #
 ##                ##
 
-[[ -x $(command -v brew) ]] \
-  && FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH \
-  && zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' \
-  && autoload -Uz compinit \
-  && compinit
+if [[ -x $(command -v brew) ]]; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+  autoload -Uz compinit
+  compinit
+fi
 
 
 ##         ##
@@ -50,26 +51,18 @@ alias -g vim='nvim'
 export EDITOR=nvim
 
 # if macos then add GPG Stuie's bin to path
-[[ $OSTYPE =~ darwin ]] \
-  && export PATH=$PATH:/usr/local/bin/MacGPG2/bin
+[[ $OSTYPE =~ darwin ]] && export PATH=$PATH:/usr/local/bin/MacGPG2/bin
 
-# set go path and add its bin to path
-export GOPATH=$HOME/.go
+# add asdf-vm to the path
+if [[ -f $HOME/.asdf/asdf.sh ]]; then
+  . $HOME/.asdf/asdf.sh
+  fpath=(${ASDF_DIR}/completions $fpath)
+  autoload -Uz compinit
+  compinit
+fi
 
-[[ -d $GOPATH/bin ]] \
-  && export PATH=$PATH:$GOPATH/bin
-
-# if pyenv then add its bin to path
-[[ -x $(command -v pyenv) ]] \
-  && export PYENV_ROOT=$HOME/.pyenv \
-  && export PATH=$PYENV_ROOT/bin:$PATH \
-  && eval "$(pyenv init -)"
-
-# if sdkman then add its bin to path
-export SDKMAN_DIR=$HOME/.sdkman
-
-[[ -x $(command -v sdk) ]] \
-  && source $SDKMAN_DIR/bin/sdkman-init.sh
+# if asdf installed java; set java home
+[[ -d $HOME/.asdf/plugins/java/ ]] && . $HOME/.asdf/plugins/java/set-java-home.zsh
 
 # setup xdg vars
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -87,5 +80,4 @@ PROMPT='%~ %# '
 #  LOCAL OVERRIDES  #
 ##                 ##
 
-[[ -f $HOME/.zshrc.local ]] \
-  && source $HOME/.zshrc.local
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
