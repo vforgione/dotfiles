@@ -34,7 +34,7 @@ alias -g cpr='rsync -avr'
 # use lsd instead of ls
 alias -g lsd='lsd --date "+%Y-%m-%d %H:%M:%S" --size short'
 alias -g ll='lsd -lh'
-alias -g la='ll -A'
+alias -g la='lsd -lhA'
 
 # auto set the p flag for mkdir
 alias -g mkdir='mkdir -p'

@@ -22,10 +22,9 @@ HISTFILESIZE=2000
   && . /usr/local/etc/profile.d/bash_completion.sh
 
 # ls aliases
-alias ls='lsd --date "+%Y-%m-%d %H:%M:%S" --size short'
-alias ll='ls -lh'
-alias la='ll -A'
-alias lr='la -R'
+alias lsd='lsd --date "+%Y-%m-%d %H:%M:%S" --size short'
+alias ll='lsd -lh'
+alias la='lsd -lhA'
 
 # cat aliases
 alias cat='bat'

@@ -1,0 +1,9 @@
+-U pip
+poetry
+black
+isort
+bandit
+mypy
+pylint
+pytest
+nox
